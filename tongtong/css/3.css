@@ -10,7 +10,7 @@ body{
 #react{
     width: 45vw;
     height:45vw;
-    margin: 200px auto;
+    margin: 35vw auto;
     transform-style:preserve-3d;
     animation:rotate 20s infinite;
     animation-timing-function: linear;
