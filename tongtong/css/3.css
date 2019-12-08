@@ -1,15 +1,77 @@
-<pre name="code" class="css">*{
-    padding:0;
-    margin:0;
+
+*{ 
+	padding: 0; 
+	margin: 0; 
+	border: none; 
+	outline: none; 
+	box-sizing: border-box; 
+} 
+*:before,*:after{ 
+	box-sizing: border-box; 
+} 
+html,body{ 
+	min-height: 100%; 
 }
+.Container{ 
+	margin: 10vw auto; 
+	width: 37vw; 
+	height: 50vw; 
+	position: relative; 
+} 
+#carousel{ 
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	transform-style:preserve-3d;
+	animation: rotation 20s infinite linear; 
+} 
+#carousel:hover{ 
+	//animation-play-state: paused; 
+} 
+#carousel figure{ 
+	display: block;
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	background: black; 
+	overflow: hidden; 
+	border: solid 5px black; 
+} 
+img{ 
+	filter: grayscale(0); 
+	cursor: pointer; 
+	transition:all 0.3s ease 0s; 
+	width: 100%; 
+	height: 100%; 
+} 
+img:hover{ 
+	filter: grayscale(0); 
+	transform: scale(1.4,1.4);
+} 
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(37vw);} 
+#carousel figure:nth-child(2) { transform: rotateY(60deg) translateZ(37vw);} 
+#carousel figure:nth-child(3) { transform: rotateY(120deg) translateZ(37vw);} 
+#carousel figure:nth-child(4) { transform: rotateY(180deg) translateZ(37vw);} 
+#carousel figure:nth-child(5) { transform: rotateY(240deg) translateZ(37vw);} 
+#carousel figure:nth-child(6) { transform: rotateY(300deg) translateZ(37vw);} 
+
+@keyframes rotation{ 
+	from{ 
+		transform: rotateY(0deg); 
+	} 
+	to{ 
+		transform: rotateY(360deg); 
+	} 
+} 
+
 body{
     width:100vw;
-    height:100vh;
+    height:99vh;
     background:linear-gradient(darkred 0%,black 100%);
 }
 #react{
-    width: 45vw;
-    height:45vw;
+    width: 40vw;
+    height:40vw;
     margin: 35vw auto;
     transform-style:preserve-3d;
     animation:rotate 20s infinite;
@@ -20,21 +82,21 @@ body{
     transition: all .4s;
 }
 div .out_pic{
-    width: 45vw;
-    height:45vw;
+    width: 40vw;
+    height:40vw;
     opacity:0.9;
 }
 div .in_pic{
-    width:22.5vw;
-    height:22.5vw;
+    width:25vw;
+    height:25vw;
 }
 #react span{
     display:block;
     position:absolute;
-    width:22.5vw;
-    height:22.5vw;
-    top:11vw;
-    left:11vw;
+    width:25vw;
+    height:25vw;
+    top:12.5vw;
+    left:12.5vw;
 }
 @keyframes rotate{
     from{transform: rotateX(0deg) rotateY(0deg);}
@@ -43,81 +105,81 @@ div .in_pic{
   
   
 .out_front{
-    transform:translateZ(22.5vw);
+    transform:translateZ(25vw);
 }
 .out_back{
-    transform:translateZ(-22.5vw);
+    transform:translateZ(-25vw);
 }
 .out_left{
-    transform:rotateY(90deg) translateZ(22.5vw);
+    transform:rotateY(90deg) translateZ(25vw);
 }
 .out_right{
-    transform: rotateY(-90deg) translateZ(22.5vw);
+    transform: rotateY(-90deg) translateZ(25vw);
 }
 .out_top{
-    transform:rotateX(90deg) translateZ(22.5vw);
+    transform:rotateX(90deg) translateZ(25vw);
 }
 .out_bottom{
-    transform: rotateX(-90deg) translateZ(22.5vw);
+    transform: rotateX(-90deg) translateZ(25vw);
 }
 .in_front{
-    transform:translateZ(11vw);
+    transform:translateZ(12.5vw);
 }
 .in_back{
-    transform:translateZ(-11vw);
+    transform:translateZ(-12.5vw);
 }
 .in_left{
-    transform:rotateY(90deg) translateZ(11vw);
+    transform:rotateY(90deg) translateZ(12.5vw);
 }
 .in_right{
-    transform: rotateY(-90deg) translateZ(11vw);
+    transform: rotateY(-90deg) translateZ(12.5vw);
 }
 .in_top{
-    transform:rotateX(90deg) translateZ(11vw);
+    transform:rotateX(90deg) translateZ(12.5vw);
 }
 .in_bottom{
-    transform: rotateX(-90deg) translateZ(11vw);
+    transform: rotateX(-90deg) translateZ(12.5vw);
 }
   
 /*外面的图片散开*/
 #react:hover .out_front{
-    transform:translateZ(45vw);
+    transform:translateZ(40vw);
 }
 #react:hover .out_back{
-    transform:translateZ(-45vw);
+    transform:translateZ(-40vw);
 }
 #react:hover .out_left{
-    transform:rotateY(90deg) translateZ(45vw);
+    transform:rotateY(90deg) translateZ(40vw);
 }
 #react:hover .out_right{
-    transform: rotateY(-90deg) translateZ(45vw);
+    transform: rotateY(-90deg) translateZ(40vw);
 }
 #react:hover .out_top{
-    transform:rotateX(90deg) translateZ(45vw);
+    transform:rotateX(90deg) translateZ(40vw);
 }
 #react:hover .out_bottom{
-    transform: rotateX(-90deg) translateZ(45vw);
+    transform: rotateX(-90deg) translateZ(40vw);
 }
   
   
 /*里面的图片散开*/
 #react:hover .in_front{
-    transform:translateZ(22.5vw);
+    transform:translateZ(25vw);
 }
 #react:hover .in_back{
-    transform:translateZ(-22.5vw);
+    transform:translateZ(-25vw);
 }
 #react:hover .in_left{
-    transform:rotateY(90deg) translateZ(22.5vw);
+    transform:rotateY(90deg) translateZ(25vw);
 }
 #react:hover .in_right{
-    transform: rotateY(-90deg) translateZ(22.5vw);
+    transform: rotateY(-90deg) translateZ(25vw);
 }
 #react:hover .in_top{
-    transform:rotateX(90deg) translateZ(22.5vw);
+    transform:rotateX(90deg) translateZ(25vw);
 }
 #react:hover .in_bottom{
-    transform: rotateX(-90deg) translateZ(22.5vw);
+    transform: rotateX(-90deg) translateZ(25vw);
 }
   
 @charset "utf-8";
