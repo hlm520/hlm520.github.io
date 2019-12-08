@@ -33,8 +33,8 @@ div .in_pic{
     position:absolute;
     width:22.5vw;
     height:22.5vw;
-    top:50px;
-    left:50px;
+    top:11vw;
+    left:11vw;
 }
 @keyframes rotate{
     from{transform: rotateX(0deg) rotateY(0deg);}
@@ -61,22 +61,22 @@ div .in_pic{
     transform: rotateX(-90deg) translateZ(22.5vw);
 }
 .in_front{
-    transform:translateZ(50px);
+    transform:translateZ(11vw);
 }
 .in_back{
-    transform:translateZ(-50px);
+    transform:translateZ(-11vw);
 }
 .in_left{
-    transform:rotateY(90deg) translateZ(50px);
+    transform:rotateY(90deg) translateZ(11vw);
 }
 .in_right{
-    transform: rotateY(-90deg) translateZ(50px);
+    transform: rotateY(-90deg) translateZ(11vw);
 }
 .in_top{
-    transform:rotateX(90deg) translateZ(50px);
+    transform:rotateX(90deg) translateZ(11vw);
 }
 .in_bottom{
-    transform: rotateX(-90deg) translateZ(50px);
+    transform: rotateX(-90deg) translateZ(11vw);
 }
   
 /*外面的图片散开*/
