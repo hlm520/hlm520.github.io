@@ -3,13 +3,13 @@
     margin:0;
 }
 body{
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     background:linear-gradient(darkred 0%,black 100%);
 }
 #react{
-    width: 400px;
-    height:400px;
+    width: 45vw;
+    height:45vw;
     margin: 200px auto;
     transform-style:preserve-3d;
     animation:rotate 20s infinite;
@@ -20,19 +20,19 @@ body{
     transition: all .4s;
 }
 div .out_pic{
-    width:200px;
-    height:200px;
+    width: 45vw;
+    height:45vw;
     opacity:0.9;
 }
 div .in_pic{
-    width:100px;
-    height:100px;
+    width:22.5vw;
+    height:22.5vw;
 }
 #react span{
     display:block;
     position:absolute;
-    width:100px;
-    height:100px;
+    width:22.5vw;
+    height:22.5vw;
     top:50px;
     left:50px;
 }
@@ -43,22 +43,22 @@ div .in_pic{
   
   
 .out_front{
-    transform:translateZ(100px);
+    transform:translateZ(22.5vw);
 }
 .out_back{
-    transform:translateZ(-100px);
+    transform:translateZ(-22.5vw);
 }
 .out_left{
-    transform:rotateY(90deg) translateZ(100px);
+    transform:rotateY(90deg) translateZ(22.5vw);
 }
 .out_right{
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(22.5vw);
 }
 .out_top{
-    transform:rotateX(90deg) translateZ(100px);
+    transform:rotateX(90deg) translateZ(22.5vw);
 }
 .out_bottom{
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(22.5vw);
 }
 .in_front{
     transform:translateZ(50px);
@@ -81,43 +81,43 @@ div .in_pic{
   
 /*外面的图片散开*/
 #react:hover .out_front{
-    transform:translateZ(200px);
+    transform:translateZ(45vw);
 }
 #react:hover .out_back{
-    transform:translateZ(-200px);
+    transform:translateZ(-45vw);
 }
 #react:hover .out_left{
-    transform:rotateY(90deg) translateZ(200px);
+    transform:rotateY(90deg) translateZ(45vw);
 }
 #react:hover .out_right{
-    transform: rotateY(-90deg) translateZ(200px);
+    transform: rotateY(-90deg) translateZ(45vw);
 }
 #react:hover .out_top{
-    transform:rotateX(90deg) translateZ(200px);
+    transform:rotateX(90deg) translateZ(45vw);
 }
 #react:hover .out_bottom{
-    transform: rotateX(-90deg) translateZ(200px);
+    transform: rotateX(-90deg) translateZ(45vw);
 }
   
   
 /*里面的图片散开*/
 #react:hover .in_front{
-    transform:translateZ(100px);
+    transform:translateZ(22.5vw);
 }
 #react:hover .in_back{
-    transform:translateZ(-100px);
+    transform:translateZ(-22.5vw);
 }
 #react:hover .in_left{
-    transform:rotateY(90deg) translateZ(100px);
+    transform:rotateY(90deg) translateZ(22.5vw);
 }
 #react:hover .in_right{
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(22.5vw);
 }
 #react:hover .in_top{
-    transform:rotateX(90deg) translateZ(100px);
+    transform:rotateX(90deg) translateZ(22.5vw);
 }
 #react:hover .in_bottom{
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(22.5vw);
 }
   
 @charset "utf-8";
